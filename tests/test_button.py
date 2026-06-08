@@ -1,9 +1,9 @@
-def test_get_started_button(page):
+def test_get_started(page):
     page.goto("https://playwright.dev")
 
-    button = page.get_by_role(
+    page.get_by_role(
         "link",
         name="Get started"
-    )
+    ).click()
 
-    assert button.is_visible()
+    print(page.text_content("h1"))
