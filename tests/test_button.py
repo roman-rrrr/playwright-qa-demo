@@ -6,4 +6,4 @@ def test_get_started(page):
         name="Get started"
     ).click()
 
-    print(page.text_content("h1"))
+    assert page.url == "https://playwright.dev/docs/intro"
