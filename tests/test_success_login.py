@@ -2,22 +2,6 @@ def test_success_login(page):
     page.goto("https://practice.expandtesting.com/login")
 
     page.locator("#username").fill("practice")
-
-    page.locator("#password").fill("SuperSecretPassword!")
-
-    page.get_by_role("button", name="Login").click()
-
-    print(page.content())
-
-    assert "/secure" in page.url
-    
-    assert page.get_by_text("You logged into a secure area!").is_visible()
-
-    assert page.get_by_role("button",name="Logout").is_visible()
-def test_success_login(page):
-    page.goto("https://practice.expandtesting.com/login")
-
-    page.locator("#username").fill("practice")
     page.locator("#password").fill("SuperSecretPassword!")
 
     page.get_by_role("button", name="Login").click()
